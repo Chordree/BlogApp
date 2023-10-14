@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+# major stuff to be added to this project..create and delete post
+#without using the admin panel 
+<style>
+h3{
+        color: blue;
+    }
+p{
+        color: orangered;
+    }
+</style>
+<html>
+    <head>
+        <title> bloggload</title>
+    </head>
+    <body>
+        <a href="{%url 'addpost'%}"> add more posts to the blog</a>
+        <h1>this is just the sample index</h1>
+        <h2> welcome to our blog </h2>
+        {%for feed in contents reversed%}
+        <h3>{{feed.title}}</h3>
+        <a href="/post/{{feed.id}}" style="text-decoration: solid;"> <p>{{feed.body|truncatewords:3}}</p></a>
+        <p1>this was posted on {{feed.post_time}}</p1>
+        {%endfor%}
+    </body> 
+</html>
+<br>
+# see if inner tags should be touching the edge in the html file
+# view my other html files  

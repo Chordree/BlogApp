@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <!-- see if the capital csr would work just fine  -->
+        {% csrf_token %}
+        <label>title</label>
+        <input required name="title" type="text">
+        <div>
+            <label>body</label>
+            <input required name="body" type="text">
+        </div>
+        <div>
+            <label>post time</label>
+            <input required name="time" type="date">
+        </div>
+        <button type='submit' class="btn btn-primary m-3">Submit</button>
+
+    </form>
+</body>
+</html>
+# add a link to the home page .. to be redirected after posting, 
+# see how to set a form field to be accepted blank 
